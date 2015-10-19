@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>常用技术</title>
+    <script src="../lib/Js/jquery-1.9.1.js"></script>
+    <script>
+
+        //把滚动条拉到底
+        function fn_scrolltop() {
+            var div = document.getElementById('content');
+            div.scrollTop = div.scrollHeight;
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="content" id="content" ></div>
+    <button onclick="fn_scrolltop()">发送</button>
+</body>
+</html>

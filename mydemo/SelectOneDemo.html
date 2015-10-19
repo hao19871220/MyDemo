@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>单选下拉菜单</title>
+    <link href="../lib/Control/jquery-chosen/chosen.css" rel="stylesheet" />
+    <link href="../lib/Control/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="../lib/Js/jquery-1.9.1.js"></script>
+    <script src="../lib/Control/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/Control/jquery-chosen/chosen.jquery.js"></script>
+    <script src="../lib/Control/jquery-chosen/chosen.jquery.js"></script>
+    <script src="../lib/Js/common.js"></script>
+
+    <script>
+        $(function () {
+            // 初始化下拉框控件
+            $ui.select(".chzn-select-deselect", { threshold: 5, deselect: true });
+            fn_bindDll();
+        });
+    //绑定数据
+    function fn_bindDll() {
+        var json = [
+            { Name: "aaa", Value: "1" },
+            { Name: "bbb", Value: "2" },
+            { Name: "ccc", Value: "3" },
+            { Name: "ddd", Value: "4" },
+            { Name: "eee", Value: "5" },
+            { Name: "fff", Value: "6" },
+            { Name: "ggg", Value: "7" },
+        ];
+        $ui.select("#dll_demo").bindData(json, "Value", "Name");
+    }
+    //获取Value值
+    function fn_getdllvalue() {
+        var value = $("#dll_demo").val();
+        alert(value);
+    }
+    //获取text值
+    function fn_getdlltext() {
+        var text = $ui.select("#dll_demo").txt();
+        alert(text);
+    }
+    //选中指定value
+    function fn_selectvalue() {
+        var value = "3";
+
+        $ui.select("#dll_demo").changeVal(value);
+    }
+
+    </script>
+    <style>
+        .select {
+        width:300px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-5">
+                <span>下拉demo</span>
+                <select id="dll_demo" class="select chzn-select-deselect" data-placeholder="请选择">
+                 
+                </select>
+            </div>
+        </div>
+        <button id="btn_bind" onclick="fn_bindDll();">绑定数据</button>
+        <button id="btn_bind" onclick="fn_getdllvalue();">获取vale数据</button>
+        <button id="btn_bind" onclick="fn_getdlltext();">获取text数据</button>
+        <button id="btn_bind" onclick="fn_selectvalue();">选择指定value</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>日期时间</title>
+    <script src="../lib/Js/jquery-1.9.1.js"></script>
+    <script src="../lib/Control/My97DatePicker/WdatePicker.js"></script>
+    <script src="../lib/Js/common.js"></script>
+    <script>
+        $(function () {
+            // 初始化下拉框控件
+            //初始化
+            //默认本周时间
+            var enddate = new Date();
+            var stardate = new Date(enddate.getFullYear(), enddate.getMonth(), enddate.getDate() - 7);
+            //时间范围
+            $ui.dateRange("datetimepickerSend1", "datetimepickerSend2", { values: [stardate, enddate] });
+
+            //开始日期
+            var _starttime = $ui.datePicker("#datetimepickerSend1").val();
+            //结束日期
+            var _endtime = $ui.datePicker("#datetimepickerSend2").val();
+        });
+    </script>
+</head>
+<body>
+
+    <input class="Wdate" type="text" id="newdate" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd', skin: 'twoer' })"> <font color=red>&lt;- 点我弹出日期控件</font>
+
+                <input type="text" id="datetimepickerSend1" class=" Wdate" data-name="valid" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd',skin:'twoer' })" readonly >
+
+                <input type="text" id="datetimepickerSend2" class=" Wdate" data-name="valid" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd',skin:'twoer' })" readonly >
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>多选文本框</title>
+    <link href="../lib/Control/jquery-ui/jquery-ui.css" rel="stylesheet" />
+    <link href="../lib/Control/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="../lib/Control/jquery-multiselect/jquery.multiselect.css" rel="stylesheet" />
+    <link href="../lib/Control/jquery-chosen/chosen.css" rel="stylesheet" />
+    <script src="../lib/Js/jquery-1.9.1.js"></script>
+    <script src="../lib/Control/jquery-ui/jquery-ui-1.10.1.custom.min.js"></script>
+    <script src="../lib/Control/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/Control/jquery-multiselect/jquery.multiselect.js"></script>
+    <script src="../lib/Js/jquery.fn.extend.js"></script>
+    <script>
+        $(function () {
+            //下拉列表框初始化
+            //$("#dll_demo").multiselect({});
+
+            //模拟多选框长度
+            $("#dll_demo").multiselect({
+                showSearchBar: true// 是否显示查询框，设置false可去掉，默认为true
+            });
+
+            fn_bindDll();
+        });
+        //绑定数据
+        function fn_bindDll() {
+            var json = [{ Name: "aaa", Value: "1" },
+                { Name: "bbb", Value: "2" },
+                { Name: "ccc", Value: "3" },
+                { Name: "ddd", Value: "4" },
+                { Name: "eee", Value: "5" },
+                { Name: "fff", Value: "6" },
+                { Name: "ggg", Value: "7" },
+            ];
+            $("#dll_demo").mutliBindData(json, "Value", "Name");
+        }
+
+        //获取Value值
+        function fn_getdllvalue() {
+            //var value = $("#dll_demo").multiselect("getChecked").map(function () {
+            //    return this.value;
+            //}).get();
+            //alert(value);
+            var value = $("#dll_demo").val();
+            alert(value);
+        }
+        //获取text值
+        function fn_getdlltext() {
+            var text = $("#dll_demo").mutlitxt();
+            alert(text);
+        }
+        //选中指定value
+        function fn_selectvalue() {
+            var value = "3,4,5";
+
+            $("#dll_demo").mutliChangeVal(value);
+        }
+        function GetJson() {
+            //类型
+            var _giftname = $("#Cust_List_StoreLast").val();
+            if (_giftname != null) {
+                return { "GiftID": _giftname.join(','), "LanguageKey": languagekey };
+            }
+            else {
+                return { "LanguageKey": languagekey };
+            }
+
+        }
+    </script>
+    <style>
+        .select {
+        width:300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <span>demo</span>
+                <select id="dll_demo" multiple class="select">
+                    <option>111</option>
+                    <option>222</option>
+                    <option>333</option>
+                    <option>444</option>
+                    <option>555</option>
+                    <option>666</option>
+                    <option>aaa</option>
+                    <option>bbb</option>
+                </select>
+            </div>
+
+        </div>
+
+    </div>
+    <button id="btn_bind" onclick="fn_bindDll();">绑定数据</button>
+    <button id="btn_bind" onclick="fn_getdllvalue();">获取vale数据</button>
+    <button id="btn_bind" onclick="fn_getdlltext();">获取text数据</button>
+    <button id="btn_bind" onclick="fn_selectvalue();">选择指定value</button>
+</body>
+</html>

@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>封面编辑</title>
+    <link href="../lib/css/web.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../lib/html5-screenshot/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../lib/html5-screenshot/css/demo.css" />
+    <!--必要样式-->
+    <link rel="stylesheet" type="text/css" href="../lib/html5-screenshot/css/component.css" />
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../lib/html5-screenshot/js/jquery-2.1.1.min.js"></script>
+
+</head>
+<body>
+    <form name="form0" id="form0">
+        <div class="main">
+
+            <input type="text" class="title" placeholder="输入章节标题" required="required" hidden />
+
+            <div class="uploadimg">
+                <div class="preview"><div style="font-size: 60px; padding-top: 40px;">+</div><p>添加封面</p></div>
+
+                <input type="file" name="file0" id="file0" class="file0" /><br>
+                <!--<img src="" id="img0">-->
+
+
+            </div>
+        </div>
+
+        <div class="content" hidden>
+
+            <div class="component" style="padding-top:50px;">
+
+                <div class="overlay">
+                    <div class="overlay-inner"></div>
+                </div>
+
+                <img class="resize-image" src="../lib/html5-screenshot/img/image.jpg" id="img0" alt="image for resizing">
+
+                <button class="btn-crop js-crop">截图<img class="icon-crop" src="../lib/html5-screenshot/img/crop.svg"></button>
+
+            </div>
+            <div class="a-tip">
+                <p><strong>提示:</strong> 按住 <span>SHIFT</span> 调整保持原来的宽高比</p>
+            </div>
+        </div><!-- /content -->
+    </form>
+    <script type="text/javascript" src="../lib/html5-screenshot/js/component.js"></script>
+    <script>
+        $(function () {
+            $("#file0").change(function () {
+                var objUrl = getObjectURL(this.files[0]);
+                console.log("objUrl = " + objUrl);
+                if (objUrl) {
+                    $("#img0").attr("src", objUrl);
+                }
+                init();
+            });
+        })
+            
+        
+        //建立一個可存取到該file的url
+        function getObjectURL(file) {
+            $(".top,.main").hide();
+            $(".content").show();
+            var url = null;
+            if (window.createObjectURL != undefined) { // basic
+                url = window.createObjectURL(file);
+            } else if (window.URL != undefined) { // mozilla(firefox)
+                url = window.URL.createObjectURL(file);
+            } else if (window.webkitURL != undefined) { // webkit or chrome
+                url = window.webkitURL.createObjectURL(file);
+            }
+            return url;
+        }
+
+    </script>
+    
+
+</body>
+
+</html>
