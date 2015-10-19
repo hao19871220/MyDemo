@@ -1,0 +1,54 @@
+﻿@charset "utf-8";
+/*科e互联特效基本框架CSS*/
+body, ul, dl, dd, dt, ol, li, p, h1, h2, h3, h4, h5, h6, textarea, form, select, fieldset, table, td, div, input {margin:0;padding:0;-webkit-text-size-adjust: none}
+h1, h2, h3, h4, h5, h6{font-size:12px;font-weight:normal}
+body>div{margin:0 auto}
+div {text-align:left}
+a img {border:0}
+body { color: #333; text-align: center; font: 12px "微软雅黑"; }
+ul, ol, li {list-style-type:none;vertical-align:0}
+a {outline-style:none;color:#535353;text-decoration:none}
+a:hover { color: #D40000; text-decoration: none}
+.clear{height:0; overflow:hidden; clear:both}
+.button {display: inline-block;zoom: 1; *display: inline;vertical-align: baseline;margin: 0 2px;outline: none;cursor: pointer;text-align: center;text-decoration: none;font: 14px/100% Arial, Helvetica, sans-serif;padding:0.25em 0.6em 0.3em;text-shadow: 0 1px 1px rgba(0,0,0,.3);-webkit-border-radius: .5em; -moz-border-radius: .5em;border-radius: .5em;-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.red {color: #faddde;border: solid 1px #980c10;background: #d81b21;background: -webkit-gradient(linear, left top, left bottom, from(#ed1c24), to(#A51715));background: -moz-linear-gradient(top,  #ed1c24,  #A51715);filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ed1c24', endColorstr='#aa1317');
+}
+.red:hover { background: #b61318; background: -webkit-gradient(linear, left top, left bottom, from(#c9151b), to(#a11115)); background: -moz-linear-gradient(top,  #c9151b,  #a11115); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#c9151b', endColorstr='#a11115'); color:#fff;}
+.red:active {color: #de898c;background: -webkit-gradient(linear, left top, left bottom, from(#aa1317), to(#ed1c24));background: -moz-linear-gradient(top,  #aa1317,  #ed1c24);filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#aa1317', endColorstr='#ed1c24');}
+.cor_bs,.cor_bs:hover{color:#ffffff;}
+.keBody{background:url(../images/bodyBg.jpg) repeat #333;}
+.keTitle{height:100px; line-height:100px; font-size:30px; font-family:'微软雅黑'; color:#FFF; text-align:center; background:url(../images/bodyBg3.jpg) repeat-x bottom left; font-weight:normal; overflow:hidden}
+.kePublic{background:#FFF; padding:50px 0;}
+.keBottom{color:#FFF; padding-top:25px; line-height:28px; text-align:center; font-family:'微软雅黑'; background:url(../images/bodyBg2.jpg) repeat-x top left; padding-bottom:25px}
+.keTxtP{font-size:16px; color:#ffffff;}
+.keUrl{color:#FFF; font-size:30px;}
+.keUrl:hover{ text-decoration: underline; color: #FFF; }
+.mKeBanner,.mKeBanner div{text-align:center;}
+/*科e互联特效基本框架CSS结束，应用特效时，以上样式可删除*/
+
+/*牙周病*/
+#cdyd2{ width:1100px; height:490px; margin:0 auto;}
+.yzbjianjie{ width:1000px; height:100px; background:url(../images/yzbimg1.jpg) 3px 8px no-repeat; float:left; text-align:left; line-height:28px; padding-left:100px; font-size:16px; padding-top:10px;
+}
+/**/
+.content{ width:1100px; height:auto; float:left;}
+.btm{ margin:30px auto}
+.btm p{ font:normal 12px/24px 'Microsoft YaHei'; text-align:center}
+/*end globel style*/
+
+
+/*index content*/
+.da-thumbs{list-style:none;height:118px;position:relative;margin:0 0 25px 0;padding:0}
+.da-thumbs li{float:left;margin-right:12px;background:#fff;position:relative;border:2px solid #fafafa;}
+.da-thumbs li a,.da-thumbs li a img{display:block;position:relative}
+.da-thumbs li a{color:#fff;overflow:hidden}
+.da-thumbs li a div{position:absolute;background:#333;background:rgba(241,182,52,0.9);*background:f1b634;background:#f1b634\0;filter:alpha(Opacity=90);width:100%;height:100%}
+.da-thumbs li a em{display:block;width:92%;height:8px;background:rgba(255,255,255,0.3);*background:#fff;background:#fff\0;filter:alpha(Opacity=30);margin:0 10px}
+.da-thumbs li a h2{ font-size:20px;margin:6px 8px;font-weight:normal;text-align:center}
+.da-thumbs li a p{ text-align:left; margin:8px 13px;font:normal 14px/18px 'Microsoft YaHei'}
+.da-thumbs li.subscribe{border:none;width:76px;height:101px;margin-right:0;background:#f1b634;padding:8px}
+.da-thumbs li.subscribe h2{font-size:33px;line-height:36px;margin:0;text-align:center; }
+.da-thumbs li.subscribe h2 span{font-size:16px; float:right; margin-right:5px; line-height:30px}
+.da-thumbs li.subscribe img{clear:right;float:right;margin:7px 5px 0 0px}
+

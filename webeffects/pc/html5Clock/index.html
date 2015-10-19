@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery+HTML5实现漂亮时钟效果 - 【科e互联】</title>
+<link href="images/css/styles.css" rel="stylesheet" type="text/css" />
+<script src="images/js/jquery.js"></script>
+<script type="text/javascript" src="images/js/clock2.js"></script>
+<script type="text/javascript" src="images/js/jQueryRotate.2.2.js"></script>
+</head>
+<body class="keBody">
+<h1 class="keTitle">jQuery+HTML5实现漂亮时钟效果</h1>
+<div class="kePublic">
+<!--效果html开始-->
+<div id="centered"> 
+  <div id="html5-clock" ></div>
+</div>
+<script type="text/javascript">        
+	var config = {        		
+		/*the name of the div containing the clock*/
+		divId: "html5-clock",        		        
+		/*set to false if you don't want to use the second hand*/		
+		useSecondHand: "true",        		
+		/*width and height of the clock*/
+		clockWidthAndHeight: "200",      		
+		/*location of the images*/
+		clockFaceImg: "images/bg/clockBg.png",
+		hourHandImg: "images/bg/hourHand.png",
+		minuteHandImg: "images/bg/minuteHand.png",
+		secondHandImg: "images/bg/secondHand.png", 
+		/*location of the high res images for retina display*/
+		clockFaceHighResImg: "images/bg/clockBgHighRes.png",
+		hourHandHighResImg: "images/bg/hourHandHighRes.png",
+		minuteHandHighResImg: "images/bg/minuteHandHighRes.png",
+		secondHandHighResImg: "images/bg/secondHandHighRes.png",
+		/*Set true to make hand move at steady speed*/
+		smoothRotation: "false",        		
+		/*speed of the second hand. Lower is faster. */
+		/*Must be under 1000. */
+		/*If smooth rotation is true, this does nothing.*/
+		secondHandSpeed: "100"        		        		
+	};        	
+	var myhtml5Clock = new html5Clock(config);        
+</script> 
+<!--效果html结束-->
+
+</div>
+
+</body>
+</html>
