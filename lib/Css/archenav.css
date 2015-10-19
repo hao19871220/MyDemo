@@ -9,7 +9,7 @@ a { text-decoration: none; color: #6c6c6c; }
 h1 { text-indent: -5000px; display: block; height: 0; font-size: 0; line-height: 0; overflow: hidden; }
 body { min-width: 1000px; padding-top: 42px; background-color: rgb(187, 187, 187); color: #6c6c6c; }
 .header { width: 100%; max-width: 1920px; margin: 0 auto; position: relative; }
-.navIL, .navIM, .logoPNG { background-image: url(../images/nav.png); }
+.navIL, .navIM, .logoPNG { background-image: url(../Images/nav.png); }
 .topNav { height: 75px; width: 100%; position: absolute; left: 0; top: 0; margin: 0 auto; overflow: hidden; z-index: 4; }
 .topNav2 { width: 200%; position: absolute; left: -50%; top: 0; }
 .navBox { width: 1920px; margin: 0 auto; position: relative; }
@@ -36,4 +36,4 @@ li.nav3, a.nav4:hover { background-position: -1120px -168px; }
 h1.logoPNG { width: 112px; height: 124px; background-position: 0 -150px; display: block; text-indent: -5000px; position: relative; top: -8px; left: -1px; }
 .header { height: 500px; }
 .logoBox { position: relative; z-index: 3; }
-.navSub dt, .navSub, li.nav3, a.nav4:hover, .navSub a:hover { background-image: url(../images/navSub.png); background-repeat: no-repeat; }
+.navSub dt, .navSub, li.nav3, a.nav4:hover, .navSub a:hover { background-image: url(../Images/navSub.png); background-repeat: no-repeat; }
