@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>条形码生成</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.barcode.0.3.js"></script>
+    <script>
+        function codebtn() {
+            var code = $("#codes").val();
+            generateCodebar(code);
+        }
+        function generateCodebar(code) {
+            $('#codebar').text(code);
+            $("#codebar").barcode();
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="codes"/>
+    <input type="button"  onclick="codebtn()"value="生成"/>
+    <div id="codebar" style="width: 450px;height: 180px;margin-top:40px;"></div>
+</body>
+</html>

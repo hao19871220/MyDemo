@@ -1,0 +1,52 @@
+*{
+	padding:0;
+	margin:0;
+}
+html,body{
+	width:100%;
+	height:100%;
+}
+[data-component-name=login]{
+	position: absolute;
+	top:40%;
+	width: 6.4rem;
+	font-family: 'microsoft yahei';
+}
+[data-component-name=login]>form{
+	text-align: center;
+}
+[data-component-name=login] input, [data-component-name=login] .connect{
+	border:0;
+	display:inline-block;
+	padding:0;
+	width:5.2rem;
+	text-align: center;
+	border-radius: 20em;
+	font-size:.3rem;
+	font-family: 'microsoft yahei';
+	height: .9rem;
+  	line-height: normal;
+	margin-bottom:.3rem;
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
+	-o-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
+}
+[data-component-name=login] .verify{
+	position:relative;
+}
+
+[data-component-name=login] .connect{
+	margin:.2rem auto;
+	display:block;
+	background:#5bb2c9;
+	color:white;
+}
+[data-component-name=login] .agreement{
+	color:#fff;
+	text-align: center;
+	font-size: .26rem;
+}
+[data-component-name=login] .agreement>a{
+	color:#ffff00;
+	text-decoration: underline;
+}

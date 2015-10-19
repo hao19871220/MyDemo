@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div data-component-name="login" class='login'>
+    	<form>
+    		<input data-element-type id="username" type="text" placeholder="请输入手机号"/>
+        	<div class="verify">
+        		<input data-element-type id="password" type="text" placeholder="验证码"/>
+                <input style="display:none;" type="submit" id="f_submit"/>
+        	</div>
+        </form>
+        <button id="login" data-element-type class="connect">
+                连接WIFI
+            </button>
+    	<p class="agreement">我已阅读并同意《<a href="##">用户协议</a>》。</p>
+    </div>
+	<script src="ai.js"></script>
+	<script src="basemobile.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿body {
+    /*cursor: pointer;
+padding顺序
+padding:10px;                           四个内边距都是10px
+padding:5px 10px;   　              上下5px　左右10px
+padding:5px 10px 15px;             上5px　右10px　下15px   左因为缺省与右相等，则为10px
+padding:5px 10px 15px 20px;     上5px　右10px　下15px 　左20px*/
+}
+
+img {
+    vertical-align: middle;
+}
+/*单行多余文字用省略号代替*/
+.word {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/*透明样式*/
+.opacity {
+    filter: alpha(opacity=90);
+    -moz-opacity: 0.9;
+    -khtml-opacity: 0.9;
+    opacity: 0.9;
+}
+/*文字阴影*/
+.yin {
+    text-shadow: 0 1px 1px red;
+}
+/*强制不换行*/
+.noworp {
+    white-space: nowrap;
+}
+/*自动换行*/
+.worp {
+    word-wrap: break-word;
+    word-break: normal;
+}
+/*强制英文单词断行*/
+.inworp {
+    word-break: break-all;
+}
+/*背景和边框分别透明度*/
+.background {
+    border: 2px solid rgba(8,135,252,1);
+    background-color: rgba(8,135,252,0.12);
+}
