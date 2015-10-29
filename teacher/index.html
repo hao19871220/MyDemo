@@ -1,10 +1,107 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>教师页</title>
+    <script src="../lib/Js/jquery-1.9.1.js"></script>
+    <script>
+        $(function () {
+            window.onload = function () {
+                var $li = $('#tab li');
+                var $ul = $('#content ul');
+
+                $li.click(function () {
+                    var $this = $(this);
+                    var $t = $this.index();
+                    $li.removeClass();
+                    $this.addClass('current');
+                    $ul.css('display', 'none');
+                    $ul.eq($t).css('display', 'block');
+                })
+            }
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body {
+            font: 12px/1.5 Tahoma;
+        }
+
+        #outer {
+            width: 600px;
+            margin: 150px auto;
+        }
+
+        #tab {
+            width:100%;
+            height: 30px;
+            zoom: 1;
+            border-bottom: 1px solid #ccc;
+        }
+
+            #tab li {
+                float: left;
+                color: #000;
+                height: 30px;
+                cursor: pointer;
+                line-height: 30px;
+                padding: 0 20px;      
+   
+            }
+
+                #tab li.current {
+                    color: #000;
+                    background: #fff;
+                    border: 1px solid #ccc;
+                    border-bottom-width: 0;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    height: 30px;
+                }
+
+        #content {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-top-width: 0;
+        }
+
+            #content ul {
+                line-height: 25px;
+                display: none;
+                margin: 0 30px;
+                padding: 10px 0;
+            }
+    </style>
 </head>
+
 <body>
+    <!-- html代码begin -->
+    <div id="outer">
+        <ul id="tab">
+            <li class="current">我的视频</li>
+            <li>我申请的视频</li>
+            <li>我的审核</li>
+        </ul>
+        <div id="content">
+            <ul style="display:block;">
+                <a href="http://www.lanrenzhijia.com/tab">tab标签</a>
+            </ul>
+            <ul>
+                <a href="http://www.lanrenzhijia.com/service">qq在线客服代码</a>
+            </ul>
+            <ul>
+                <a href="http://www.lanrenzhijia.com/js/css3">css3</a>
+            </ul>
+        </div>
+    </div>
+    <!-- html代码end -->
+
+    
 
 </body>
 </html>
